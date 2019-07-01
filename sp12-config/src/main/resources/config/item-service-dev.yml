@@ -6,8 +6,12 @@ spring:
     port: 5672
     username: admin
     password: admin
-#server:
-#  port: 8001
+  sleuth:
+    sampler:
+      probability: 0.1
+    
+server:
+  port: 8001
   
 eureka:
   client:

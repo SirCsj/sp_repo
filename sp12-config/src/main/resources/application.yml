@@ -3,16 +3,21 @@ spring:
     name: config-server
   rabbitmq:
     host: 192.168.17.132
-    port: 15672
+    port: 5672
     username: admin
     password: admin
+
+  profiles:
+    active: native
     
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/SirCsj/sp_repo
-          searchPaths: sp-config
+#  cloud: 默认配置
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/config
+#        git:
+#          uri: https://github.com/SirCsj/sp_repo
+#          searchPaths: sp-config
           #username: your-username
           #password: your-password
     
